@@ -4,12 +4,6 @@
 #include <time.h>
 
 
-/* C dili ile bağlı liste (linked list) veri yapısı kullanılarak,
- maksimum kapasite kontrolü yapan, plakaya göre
-araç arama ve park sırası tespiti gerçekleştiren,
- zaman bazlı ücret hesaplayan otopark yönetim sistemi geliştirildi. */
-
-
 
  struct Arac {
      char plaka[20];
@@ -57,10 +51,10 @@ araç arama ve park sırası tespiti gerçekleştiren,
         printf("Gunluk Kazanc: %f TL \n",gunlukKazanc);
         break;
     case 0:
-        printf("Programdan Cıkılıyor \n");
+        printf("Programdan CÄ±kÄ±lÄ±yor \n");
         break;
     default:
-        printf("Hatalı Secim \n");
+        printf("HatalÄ± Secim \n");
         }
      } while (secim !=0);
      return 0;
@@ -80,7 +74,7 @@ araç arama ve park sırası tespiti gerçekleştiren,
 
  void aracGrisi() {
      if(mevcutArac >= kapasite){
-        printf("Otopark dolu. Giriş yapılamaz \n");
+        printf("Otopark dolu. GiriÅŸ yapÄ±lamaz \n");
         return ;
      }
 
@@ -125,7 +119,7 @@ araç arama ve park sırası tespiti gerçekleştiren,
      }
 
      char plaka[20];
-     printf("Aracın plakasını giriniz: ");
+     printf("AracÄ±n plakasÄ±nÄ± giriniz: ");
      scanf(" %[^\n]s",plaka);
 
      struct Arac *temp =head;
@@ -191,7 +185,7 @@ araç arama ve park sırası tespiti gerçekleştiren,
 
      while(temp!=NULL){
         if(strcmp(temp->plaka,plaka)==0){
-            printf(" %s plakali arac otoparktadır. \n",plaka);
+            printf(" %s plakali arac otoparktadÄ±r. \n",plaka);
             printf("Park Sirasi: %d \n",sira);
             return;
         }
@@ -210,4 +204,5 @@ araç arama ve park sırası tespiti gerçekleştiren,
         return 50;
      else
         return 50 + ((dakika -60)/60) *25 ; }
+
 
